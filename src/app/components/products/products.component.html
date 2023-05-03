@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let product of products">
+      <div class="card">
+        <img class="card-img-top" [src]="product.image" width="200px" height="200px">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">R${{ product.price }},00</p>
+          <button mat-button color="primary" (click)="addToCart(product)">Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

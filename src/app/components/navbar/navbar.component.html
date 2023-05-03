@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <div style="display: flex; justify-content: flex-start; align-items: center; flex: 1;">
+    <span style="color: white;">Minha loja</span>
+  </div>
+  <div style="display: flex; justify-content: flex-end; align-items: center;">
+    <a  style="padding: 10px; color: white;text-decoration: none;" [routerLink]="''">
+      Home
+    </a>
+    <a style="padding: 10px; color: white;text-decoration: none;" [routerLink]="['/product']">
+      Produtos
+    </a>
+    
+    <a  style="padding: 10px; color: white; text-decoration: none;" [routerLink]="['/cart']">
+      Carrinho
+    </a>
+  </div>
+</mat-toolbar>

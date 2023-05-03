@@ -1,0 +1,21 @@
+<div class="cart">
+  <div class="cart-header">
+    <h2>Carrinho de compras</h2>
+  </div>
+  <div class="cart-items">
+    <div *ngFor="let item of cartItems">
+      <div class="cart-item">
+        <img class="card-img-top" [src]="item.image">
+        <div class="cart-item-details">
+          <p class="cart-item-title">{{ item.title }}</p>
+          <p class="cart-item-price">R${{ item.price }},00</p>
+          <button mat-button color="primary" (click)="removeItem(item)">Remover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-summary">
+    <p>Total: R${{ total }},00</p>
+    <button mat-button color="primary" (click)="clearCart()">Limpar carrinho</button>
+  </div>
+</div>
